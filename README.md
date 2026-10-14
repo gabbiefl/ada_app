@@ -12,7 +12,10 @@
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Fase atual](https://img.shields.io/badge/fase%20atual-0%20%E2%80%94%20viabilidade-orange)
 ![Projeto acadêmico](https://img.shields.io/badge/projeto-acad%C3%AAmico-blue)
+<<<<<<< HEAD
 ![Mostra](https://img.shields.io/badge/mostra-23%2F11%2F2026-purple)
+=======
+>>>>>>> acb29795fe7c1d4a197f50e1d462509072163814
 
 </div>
 
