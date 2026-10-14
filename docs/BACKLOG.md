@@ -21,13 +21,13 @@
 
 | ID | Item | Prio | Status |
 |---|---|---|---|
-| F0-01 | Validar envio de mensagens pelo WhatsApp (abrir com mensagem pronta x envio automático) `[?]` | M | ⬜ |
-| F0-02 | Validar localização em tempo real em segundo plano no Android `[?]` | M | ⬜ |
-| F0-03 | Validar acionamento rápido com o celular bloqueado `[?]` | S | ⬜ |
-| F0-04 | Validar chamada telefônica rápida (`tel:`) `[?]` | M | ⬜ |
-| F0-05 | Levantar requisitos de privacidade e LGPD (contatos e localização) | S | ⬜ |
-| F0-06 | Definir o escopo do MVP da mostra e os planos B | M | ⬜ |
-| F0-07 | Definir a stack tecnológica (base do Nível 1 aprovada; ver seção 9.1 do plano da Fase 0) | M | ⬜ |
+| F0-01 | Validar envio de mensagens pelo WhatsApp (abrir com mensagem pronta x envio automático) `[plano B]` (automático inviável; `wa.me` com toque da usuária) | M | ✅ |
+| F0-02 | Validar localização em tempo real em segundo plano no Android `[?]` (em aberto: abordagem definida após spike na Fase 8) | M | 🔄 |
+| F0-03 | Validar acionamento rápido com o celular bloqueado `[plano B]` (exige código nativo; fora do MVP, ver IDEIA-01) | S | ✅ |
+| F0-04 | Validar chamada telefônica rápida (`tel:`) `[ok]` (`tel:` abre o discador; ligação direta a testar na Fase 9) | M | ✅ |
+| F0-05 | Levantar requisitos de privacidade e LGPD (contatos e localização) (ver seção 9.2 do plano) | S | ✅ |
+| F0-06 | Definir o escopo do MVP da mostra e os planos B (Nível 1 garantido, Nível 2 meta; ver seções 6 e 7 do plano) | M | ✅ |
+| F0-07 | Definir a stack tecnológica (base do Nível 1 aprovada; ver seção 9.1 do plano da Fase 0) | M | ✅ |
 
 ## Fase 1 — Fundamentos e estrutura
 
@@ -89,7 +89,7 @@
 | ID | Item | Prio | Status |
 |---|---|---|---|
 | F7-01 | Lógica de transição entre os modos | M | ⬜ |
-| F7-02 | Ação rápida de ativação do Modo Perigo | M | ⬜ |
+| F7-02 | Ação rápida de ativação do Modo Perigo (meta: até 2 toques; limite aceitável: 3, ver RNF01) | M | ⬜ |
 | F7-03 | Desativação segura (evitar acionamento acidental) | S | ⬜ |
 | F7-04 | Feedback visual e háptico | C | ⬜ |
 
@@ -109,7 +109,7 @@
 | F9-01 | Chamada telefônica rápida | M | ⬜ |
 | F9-02 | Envio da mensagem ao WhatsApp `[?]` | M | ⬜ |
 | F9-03 | Acionar a rede de contatos de forma simultânea ou sequencial `[?]` | M | ⬜ |
-| F9-04 | Alternativa por SMS `[?]` | S | ⬜ |
+| F9-04 | Alternativa por SMS via `sms:` (`url_launcher`), sem SMS direto; testar vários destinatários `[?]` | S | ⬜ |
 
 ## Fase 10 — Regras por horário
 
@@ -133,7 +133,7 @@
 | ID | Item | Prio | Status |
 |---|---|---|---|
 | F12-01 | Gerar o APK de release | M | ⬜ |
-| F12-02 | README do projeto | S | ⬜ |
+| F12-02 | README do projeto (versão inicial criada na Fase 0; finalizar com instruções de execução e capturas de tela) | S | 🔄 |
 | F12-03 | Roteiro de demonstração para a mostra | M | ⬜ |
 
 ---
