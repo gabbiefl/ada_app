@@ -13,7 +13,7 @@
 
 ## Fase atual
 
-**Fase 0 — Entendimento e viabilidade** (plano criado em `docs/planejamento/fase-00-viabilidade.md`, aguardando aprovação)
+**Fase 1 — Fundamentos e estrutura do projeto** (plano criado em `docs/planejamento/fase-01-fundamentos.md`, aguardando aprovação). A Fase 0 está concluída (ver `docs/planejamento/fase-00-viabilidade.md`)
 
 ---
 
@@ -35,7 +35,9 @@
 |---|---|---|---|
 | F1-01 | Organizar pastas conforme o CLAUDE.md | M | ⬜ |
 | F1-02 | Limpar o código de exemplo do `flutter create` | M | ⬜ |
-| F1-03 | Configurar Git e `.gitignore`, primeiro commit | M | ⬜ |
+| F1-03 | Configurar Git e `.gitignore`, primeiro commit (já feito; conferir na Fase 1) | M | 🔄 |
+| F1-04 | Criar e configurar o emulador Android (AVD). Adiado: desenvolvimento no Chrome por enquanto; fazer antes da Fase 7 | M | ⏸️ |
+| F1-05 | Definir o nome do app e o `applicationId` (hoje `com.example.ada_app`; escolhido `br.academico.cesuca.ada`, aplicar junto com o Android) | S | ⏸️ |
 
 ## Fase 2 — Tema e design system
 
