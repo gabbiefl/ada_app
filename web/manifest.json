@@ -1,11 +1,11 @@
 {
-    "name": "ada_app",
-    "short_name": "ada_app",
+    "name": "ADA",
+    "short_name": "ADA",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "ADA — Alerta, Defesa e Apoio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

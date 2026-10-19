@@ -1,30 +1,21 @@
-// This is a basic Flutter widget test.
+// Teste de widget: monta o app em um ambiente de teste (sem emulador)
+// e verifica o que aparece na tela.
 //
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
+// Rode com: flutter test
 
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:ada_app/main.dart';
+import 'package:ada_app/app.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // `testWidgets` cria um teste que recebe um `tester`, o "controle remoto"
+  // para montar widgets, tocar na tela e consultar o que está visível.
+  testWidgets('A tela inicial mostra o nome e o lema do ADA', (tester) async {
+    // Monta o app e espera o primeiro quadro ser desenhado.
+    await tester.pumpWidget(const AdaApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
-
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
-
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // `find.text` procura um Text com exatamente esse conteúdo.
+    expect(find.text('ADA'), findsOneWidget);
+    expect(find.text('Alerta, Defesa e Apoio'), findsOneWidget);
   });
 }

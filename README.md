@@ -10,7 +10,7 @@
 ![Material 3](https://img.shields.io/badge/Material%20Design%203-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Fase atual](https://img.shields.io/badge/fase%20atual-0%20%E2%80%94%20viabilidade-orange)
+![Fase atual](https://img.shields.io/badge/fase%20atual-1%20%E2%80%94%20fundamentos-orange)
 ![Projeto acadêmico](https://img.shields.io/badge/projeto-acad%C3%AAmico-blue)
 
 </div>
@@ -32,7 +32,22 @@ A proposta é oferecer uma forma **rápida e simples de pedir ajuda em situaçõ
 
 ## ▶️ Como rodar
 
-> 🚧 O projeto Flutter ainda não foi criado (Fase 1). As instruções entram aqui quando houver o que executar.
+**Pré-requisito:** [Flutter](https://docs.flutter.dev/get-started/install) instalado (desenvolvido com a versão 3.47.6, canal stable).
+
+```bash
+git clone https://github.com/gabbiefl/ada_app.git
+cd ada_app
+flutter pub get          # baixa as dependências
+flutter run -d chrome    # roda no navegador
+```
+
+Com o app rodando: `r` faz hot reload, `R` faz hot restart e `q` encerra.
+
+Para conferir a qualidade do código: `flutter analyze` e `flutter test`.
+
+> 🚧 Por enquanto o desenvolvimento acontece no Chrome. A execução em emulador ou celular Android será documentada quando o ambiente Android for configurado.
+>
+> 💡 **Windows:** evite deixar o projeto dentro do OneDrive. A sincronização pode travar a pasta `build/` e fazer o `flutter run` falhar.
 
 ## 👩‍💻 Autoria
 

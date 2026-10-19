@@ -1,6 +1,6 @@
 # Fase 1 — Fundamentos e estrutura do projeto
 
-> **Status:** 📝 em planejamento (aguardando aprovação)
+> **Status:** 🔄 em execução (plano aprovado)
 > **Itens do backlog:** F1-01 a F1-05
 
 ## 1. Objetivo
@@ -52,11 +52,11 @@ Um app mínimo do ADA (uma tela inicial simples) rodando no emulador, com a estr
 ## 6. Passos
 | # | Passo | Tamanho | O que a usuária aprende |
 |---|---|---|---|
-| 1 | Rodar o app de exemplo no Chrome (`flutter run -d chrome`) e simular o tamanho de celular (F12 → ícone de dispositivo) | P | Ciclo de desenvolvimento, `flutter devices`, janela x tela de celular |
-| 2 | Testar hot reload e hot restart alterando um texto | P | Diferença entre reload e restart |
-| 3 | Passeio guiado pelo projeto: `pubspec.yaml`, `main.dart`, `android/`, `test/` | M | Para que serve cada pasta e arquivo, árvore de widgets |
-| 4 | Definir o nome do app e o `applicationId` (pede confirmação, ver seção 7) | P | Identidade do app no Android e por que mudar cedo |
-| 5 | Limpar o código de exemplo: `main.dart` mínimo e `app.dart` com `MaterialApp` e uma tela inicial simples; ajustar o teste | M | `StatelessWidget`, `MaterialApp`, `Scaffold`, `const`, testes de widget |
+| 1 ✅ | Rodar o app de exemplo no Chrome (`flutter run -d chrome`) e simular o tamanho de celular (F12 → ícone de dispositivo) | P | Ciclo de desenvolvimento, `flutter devices`, janela x tela de celular |
+| 2 ✅ | Testar hot reload e hot restart alterando um texto | P | Diferença entre reload e restart |
+| 3 ✅ | Passeio guiado pelo projeto: `pubspec.yaml`, `main.dart`, `android/`, `test/` | M | Para que serve cada pasta e arquivo, árvore de widgets |
+| 4 ✅ | Definir o nome do app e o `applicationId` (pede confirmação, ver seção 7) | P | Identidade do app no Android e por que mudar cedo |
+| 5 ✅ | Limpar o código de exemplo: `main.dart` mínimo e `app.dart` com `MaterialApp` e uma tela inicial simples; ajustar o teste | M | `StatelessWidget`, `MaterialApp`, `Scaffold`, `const`, testes de widget |
 | 6 | Criar a estrutura de pastas do CLAUDE.md (`lib/core/`, `lib/features/...`) | P | Organização por funcionalidade (*feature-first*) e por que ela escala |
 | 7 | Rodar `flutter analyze`, `flutter test` e o app no Chrome | P | Como ler avisos do analyzer e o resultado de um teste |
 | 8 | Atualizar o README ("Como rodar"), o backlog, preencher a retrospectiva e sugerir o commit | P | Fechar uma fase com registro; commit e `push` sem conflito |
@@ -83,9 +83,9 @@ Um app mínimo do ADA (uma tela inicial simples) rodando no emulador, com a estr
 
 ## 9. Critérios de pronto
 - [ ] App rodando no Chrome
-- [ ] Código de exemplo do contador removido
+- [x] Código de exemplo do contador removido
 - [ ] Estrutura `lib/core/` e `lib/features/` criada
-- [ ] Nome do app definido (o `applicationId` `br.academico.cesuca.ada` é aplicado no passo 9, junto com o Android)
+- [x] Nome do app definido: "ADA" (o `applicationId` `br.academico.cesuca.ada` é aplicado no passo 9, junto com o Android)
 - [ ] `flutter analyze` sem avisos
 - [ ] `flutter test` passando
 - [ ] README ("Como rodar") e backlog atualizados
@@ -105,7 +105,7 @@ flutter test
 - ✅ Android Studio: não instalado; será instalado no passo 1.
 - ✅ Celular: há um Xiaomi sem uso para testes por cabo (precisa de cabo USB de dados).
 - ✅ `applicationId`: `br.academico.cesuca.ada` (o grupo pode trocar até o passo 4). Não é necessário ter domínio próprio.
-- 🔓 OneDrive: pausar a sincronização (temporário, 2/8/24 h) ou mover o projeto para fora do OneDrive (por exemplo `C:\dev\ada_app`, mais robusto). A decidir.
+- ✅ OneDrive: projeto movido para fora do OneDrive, hoje em `C:\dev\projeto-flutter\ada_app`. Detalhe: as pastas de `build/` vieram com o atributo ReadOnly (herdado da sincronização) e o Flutter não conseguia apagar `build\flutter_assets`; resolvido removendo `build/` com `Remove-Item -Recurse -Force`.
 
 ---
 
