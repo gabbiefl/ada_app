@@ -17,6 +17,8 @@
 
 ---
 
+> Próxima: **Fase 2 — Tema e design system** (plano aprovado e em execução, em `docs/planejamento/fase-02-tema-design.md`). A Fase 1 só fecha com o passo 9 (Android) adiado e a retrospectiva preenchida.
+
 ## Fase 0 — Entendimento e viabilidade
 
 | ID | Item | Prio | Status |
@@ -43,10 +45,10 @@
 
 | ID | Item | Prio | Status |
 |---|---|---|---|
-| F2-01 | Conectar o MCP do Figma e autenticar | M | ⬜ |
-| F2-02 | Extrair cores, tipografia e espaçamentos | M | ⬜ |
+| F2-01 | Conectar o MCP do Figma e autenticar | M | ✅ |
+| F2-02 | Extrair cores, tipografia e espaçamentos (Home e Modo perigo ativo lidas; estilos de botão e campo ficam para a Fase 3) | M | ✅ |
 | F2-03 | Criar `app_theme.dart` (ThemeData, ColorScheme, TextTheme) | M | ⬜ |
-| F2-04 | Definir as cores dos modos 🟢🟡🔴 no tema | M | ⬜ |
+| F2-04 | Definir as cores dos modos 🔵🟡🔴 no tema | M | ⬜ |
 
 ## Fase 3 — Telas estáticas
 
@@ -150,6 +152,7 @@
 | IDEIA-04 | Backend do acompanhamento ao vivo (promovido, ver F8-04). Envio automático de WhatsApp segue inviável | S | ⬜ |
 | IDEIA-05 | Tela de apoio com telefones úteis | C | ⬜ |
 | IDEIA-06 | Suporte a iOS | W | ⬜ |
+| IDEIA-07 | Modo escuro (o design atual só tem tema claro) | W | ⬜ |
 
 ## Riscos e dúvidas em aberto
 

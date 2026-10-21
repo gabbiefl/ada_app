@@ -65,7 +65,7 @@ e pode ativar três níveis de segurança:
 
 | Nível | Quando usar |
 |---|---|
-| 🟢 **Normal** | Situação cotidiana, sem alerta ativo |
+| 🔵 **Normal** | Situação cotidiana, sem alerta ativo |
 | 🟡 **Modo Atenção** | Situação suspeita ou sensação de vulnerabilidade |
 | 🔴 **Modo Perigo** | Situação de emergência |
 
@@ -164,7 +164,7 @@ Cada fase termina com um commit e um breve resumo do aprendizado.
 ### Fase 2 — Tema e design system (Figma → Flutter)
 - **Foco:** configurar o MCP do Figma e extrair cores, tipografia e espaçamentos.
 - **Conceitos:** MCP, design tokens, `ThemeData`, `ColorScheme`, `TextTheme`, Material 3.
-- **Entregável:** `app_theme.dart` fiel ao design, incluindo as cores dos modos 🟢🟡🔴.
+- **Entregável:** `app_theme.dart` fiel ao design, incluindo as cores dos modos 🔵🟡🔴 (Normal em azul-marinho `#172033`, conforme o design).
 
 ### Fase 3 — Telas estáticas (UI)
 - **Foco:** construir as telas sem lógica, uma por vez, a partir dos links do Figma.
