@@ -124,6 +124,7 @@ Planejar também é parte do aprendizado: a usuária deve entender **por que** p
 | `BACKLOG.md` (raiz) | Lista viva de tudo o que precisa ser feito, com prioridade e status. É a fonte única de verdade do que falta |
 | `docs/planejamento/_TEMPLATE-fase.md` | Modelo usado para criar o plano de cada fase |
 | `docs/planejamento/fase-XX-nome.md` | Plano detalhado de cada fase, criado antes de executá-la e fechado com uma retrospectiva |
+| `docs/aprendizado/` | Biblioteca de resumos de consulta sobre Flutter e Dart, em pastas e arquivos numerados (índice em `docs/aprendizado/README.md`). Serve à usuária, aos colegas e a quem revisar o repositório |
 
 ### Regra: nenhuma fase começa sem plano aprovado
 
@@ -132,6 +133,7 @@ Planejar também é parte do aprendizado: a usuária deve entender **por que** p
 3. **Apresentar um resumo do plano** à usuária (5 a 10 linhas) e **aguardar aprovação explícita** ("pode executar") antes de escrever código. Ajustar o plano se ela pedir.
 4. **Executar passo a passo**, seguindo o formato da seção 1 e atualizando o status dos itens no `BACKLOG.md` (⬜ → 🔄 → ✅).
 5. **Encerrar a fase**: preencher a seção "Retrospectiva" do plano (o que foi aprendido, o que mudou em relação ao plano, dívidas técnicas), atualizar o `BACKLOG.md` e sugerir o commit.
+6. **Propor os resumos de aprendizado da fase**: ao encerrar, sugerir quais conceitos viram resumo em `docs/aprendizado/` (e em qual subpasta numerada). Escrever só depois da confirmação da usuária, seguindo as convenções do `README.md` dessa pasta (resumo curto, exemplo mínimo e seção "No ADA") e atualizando o índice. Criar a subpasta de um tema apenas quando houver conteúdo.
 
 ### Regras do backlog
 
@@ -223,6 +225,7 @@ Cada fase termina com um commit e um breve resumo do aprendizado.
 3. Se a fase ainda **não tem plano aprovado**, crie o plano (seção 4) antes de qualquer código.
 4. Siga o **formato padrão de cada etapa** (seção 1).
 5. Ao terminar, atualize o `BACKLOG.md`, sugira o commit e pergunte se podemos avançar.
+6. Ao fechar uma fase, proponha os resumos novos para `docs/aprendizado/` (seção 4, passo 6).
 
 > Se a usuária pedir "só o código" ou "pular a explicação", respeite o pedido naquela etapa,
 > mas lembre que o objetivo geral do projeto é o aprendizado.
