@@ -57,7 +57,7 @@ Um app mínimo do ADA (uma tela inicial simples) rodando no emulador, com a estr
 | 3 ✅ | Passeio guiado pelo projeto: `pubspec.yaml`, `main.dart`, `android/`, `test/` | M | Para que serve cada pasta e arquivo, árvore de widgets |
 | 4 ✅ | Definir o nome do app e o `applicationId` (pede confirmação, ver seção 7) | P | Identidade do app no Android e por que mudar cedo |
 | 5 ✅ | Limpar o código de exemplo: `main.dart` mínimo e `app.dart` com `MaterialApp` e uma tela inicial simples; ajustar o teste | M | `StatelessWidget`, `MaterialApp`, `Scaffold`, `const`, testes de widget |
-| 6 | Criar a estrutura de pastas do CLAUDE.md (`lib/core/`, `lib/features/...`) | P | Organização por funcionalidade (*feature-first*) e por que ela escala |
+| 6 ✅ | Criar a estrutura de pastas do CLAUDE.md (`lib/core/`, `lib/features/...`) | P | Organização por funcionalidade (*feature-first*) e por que ela escala |
 | 7 | Rodar `flutter analyze`, `flutter test` e o app no Chrome | P | Como ler avisos do analyzer e o resultado de um teste |
 | 8 | Atualizar o README ("Como rodar"), o backlog, preencher a retrospectiva e sugerir o commit | P | Fechar uma fase com registro; commit e `push` sem conflito |
 | 9 | **Adiado (antes da Fase 7):** instalar o Android Studio e o SDK, aceitar as licenças (`flutter doctor --android-licenses`), criar o emulador (AVD), preparar o Xiaomi (depuração USB) e aplicar o `applicationId` (o build Android valida a troca) | G | Emulador x aparelho real, SDK, `flutter doctor`, depuração USB, identidade do app no Android |
@@ -84,7 +84,7 @@ Um app mínimo do ADA (uma tela inicial simples) rodando no emulador, com a estr
 ## 9. Critérios de pronto
 - [ ] App rodando no Chrome
 - [x] Código de exemplo do contador removido
-- [ ] Estrutura `lib/core/` e `lib/features/` criada
+- [x] Estrutura `lib/core/` e `lib/features/` criada
 - [x] Nome do app definido: "ADA" (o `applicationId` `br.academico.cesuca.ada` é aplicado no passo 9, junto com o Android)
 - [ ] `flutter analyze` sem avisos
 - [ ] `flutter test` passando

@@ -33,7 +33,7 @@
 
 | ID | Item | Prio | Status |
 |---|---|---|---|
-| F1-01 | Organizar pastas conforme o CLAUDE.md | M | ⬜ |
+| F1-01 | Organizar pastas conforme o CLAUDE.md | M | ✅ |
 | F1-02 | Limpar o código de exemplo do `flutter create` | M | ✅ |
 | F1-03 | Configurar Git e `.gitignore`, primeiro commit (já feito; conferir na Fase 1) | M | 🔄 |
 | F1-04 | Criar e configurar o emulador Android (AVD). Adiado: desenvolvimento no Chrome por enquanto; fazer antes da Fase 7 | M | ⏸️ |
