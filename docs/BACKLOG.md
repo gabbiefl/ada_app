@@ -47,8 +47,8 @@
 |---|---|---|---|
 | F2-01 | Conectar o MCP do Figma e autenticar | M | ✅ |
 | F2-02 | Extrair cores, tipografia e espaçamentos (Home e Modo perigo ativo lidas; estilos de botão e campo ficam para a Fase 3) | M | ✅ |
-| F2-03 | Criar `app_theme.dart` (ThemeData, ColorScheme, TextTheme) | M | ⬜ |
-| F2-04 | Definir as cores dos modos 🔵🟡🔴 no tema | M | ⬜ |
+| F2-03 | Criar `app_theme.dart` (ThemeData, ColorScheme, TextTheme) | M | ✅ |
+| F2-04 | Definir as cores dos modos 🔵🟡🔴 no tema | M | ✅ |
 
 ## Fase 3 — Telas estáticas
 

@@ -42,8 +42,8 @@ O app inteiro passa a ter as cores e fontes do design. A tela inicial provisóri
 | 2 ✅ | Testar a conexão lendo o frame do link e confirmar o que o Figma devolve | P | Como o Claude "enxerga" um design |
 | 3 ✅ | Extrair e registrar os tokens: cores, tipografia, espaçamentos, raios (F2-02) | M | Design tokens; ler um design de forma sistemática |
 | 4 ✅ | Revisar os tokens com a usuária (checkpoint antes de codar) | P | Validar decisões de design antes de implementar |
-| 5 | Criar `app_theme.dart` com `ColorScheme` e `TextTheme` (F2-03) | M | `ThemeData`, `ColorScheme`, `TextTheme`, Material 3 |
-| 6 | Criar as cores dos modos 🔵🟡🔴 com `ThemeExtension` (F2-04) | M | `ThemeExtension`, `lerp`, `copyWith` |
+| 5 ✅ | Criar `app_theme.dart` com `ColorScheme` e `TextTheme` (F2-03) | M | `ThemeData`, `ColorScheme`, `TextTheme`, Material 3 |
+| 6 ✅ | Criar as cores dos modos 🔵🟡🔴 com `ThemeExtension` (F2-04) | M | `ThemeExtension`, `lerp`, `copyWith` |
 | 7 | Aplicar o tema no `app.dart`, conferir a `HomePage`, `flutter analyze` e `flutter test` | P | `Theme.of(context)`, teste de widget do tema |
 | 8 | Retrospectiva, resumos em `docs/aprendizado/`, backlog e commit | P | Fechar a fase com registro |
 
