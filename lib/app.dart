@@ -1,11 +1,11 @@
 // Widget raiz do ADA: configura o MaterialApp (título, tema e tela inicial).
 //
 // Este arquivo cresce nas próximas fases:
-//  - Fase 2: o tema vem do Figma (lib/core/theme/app_theme.dart)
 //  - Fase 4: a tela inicial é substituída pelas rotas (go_router)
 
 import 'package:flutter/material.dart';
 
+import 'package:ada_app/core/theme/app_theme.dart';
 import 'package:ada_app/features/home/pages/home_page.dart';
 
 // StatelessWidget: um widget que NÃO guarda dados que mudam.
@@ -24,12 +24,8 @@ class AdaApp extends StatelessWidget {
     return MaterialApp(
       // Nome que o sistema usa, por exemplo na lista de apps recentes.
       title: 'ADA',
-      // Tema PROVISÓRIO: a cor-semente abaixo é só para o app ter uma cor.
-      // Na Fase 2 ela será trocada pelas cores reais do Figma.
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
+      // Tema do ADA (cores e fonte do Figma), definido em core/theme/.
+      theme: AppTheme.light,
       // `home` é a primeira tela exibida.
       home: const HomePage(),
     );
