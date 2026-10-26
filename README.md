@@ -10,7 +10,7 @@
 ![Material 3](https://img.shields.io/badge/Material%20Design%203-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Fase atual](https://img.shields.io/badge/fase%20atual-1%20%E2%80%94%20fundamentos-orange)
+![Fase atual](https://img.shields.io/badge/fase%20atual-3%20%E2%80%94%20telas%20est%C3%A1ticas-orange)
 ![Projeto acadêmico](https://img.shields.io/badge/projeto-acad%C3%AAmico-blue)
 
 </div>
@@ -24,11 +24,23 @@ A proposta é oferecer uma forma **rápida e simples de pedir ajuda em situaçõ
 
 > 🚧 **Projeto em desenvolvimento.** O app está sendo construído em etapas, e a ideia, o escopo e as funcionalidades ainda podem mudar ao longo do caminho.
 
+## 📍 Onde estamos
+
+| Fase | Entrega | Situação |
+|---|---|---|
+| 0 e 1 | Viabilidade, fundamentos e estrutura do projeto | ✅ |
+| 2 | Tema e design system (cores, fonte Nunito, cores dos modos 🔵🟡🔴) | ✅ |
+| 3 | Telas estáticas a partir do Figma | 🔄 Home pronta (cabeçalho, símbolo com anéis animados, cards dos modos, barra de navegação, estado "Perigo ativo") |
+| 4 em diante | Navegação, rede de contatos, modos de alerta, localização e envio | ⬜ |
+
+O plano de cada fase está em [`docs/planejamento/`](docs/planejamento/) e a lista de itens em [`docs/BACKLOG.md`](docs/BACKLOG.md).
+
 ## 🧰 Tecnologias
 
 - **Flutter** e **Dart**, com Material Design 3
 - **Android** como plataforma principal
-- **Figma** para o design das telas
+- **Figma** para o design das telas, lido pelo Claude Code via MCP
+- **Nunito** como fonte e **Lucide** como família de ícones (pacote `lucide_icons_flutter`)
 
 ## ▶️ Como rodar
 
@@ -48,6 +60,23 @@ Para conferir a qualidade do código: `flutter analyze` e `flutter test`.
 > 🚧 Por enquanto o desenvolvimento acontece no Chrome. A execução em emulador ou celular Android será documentada quando o ambiente Android for configurado.
 >
 > 💡 **Windows:** evite deixar o projeto dentro do OneDrive. A sincronização pode travar a pasta `build/` e fazer o `flutter run` falhar.
+
+## 🗂️ Estrutura do código
+
+```
+lib/
+├── core/
+│   ├── theme/      # cores, textos e tema do app (AppTheme, ModeColors)
+│   └── widgets/    # widgets usados em várias telas (barra de navegação)
+└── features/       # uma pasta por funcionalidade (home, contacts, modes...)
+    └── home/
+        ├── pages/    # telas
+        └── widgets/  # peças da tela (anéis, cards dos modos, chip)
+```
+
+## 📚 Aprendizado
+
+Os resumos de Flutter e Dart escritos ao longo do projeto estão em [`docs/aprendizado/`](docs/aprendizado/).
 
 ## 👩‍💻 Autoria
 
