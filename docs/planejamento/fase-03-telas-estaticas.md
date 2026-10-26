@@ -39,8 +39,8 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 | 2 ✅ | Home, parte 1: cabeçalho, saudação e símbolo central (Normal); anéis animados em widget próprio | M | `Column`, `Row`, `Stack`, `Padding` |
 | 3 ✅ | Home, parte 2: `ModeCard` reutilizável (Atenção e Perigo) | M | Composição, parâmetros de widget |
 | 4 ✅ | Home, parte 3: barra de navegação e variação "Perigo ativo" (chip) | M | Widgets com parâmetros, `NavigationBar` |
-| 5 | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
-| 6 | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |
+| 5 🔄 | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
+| 6 🔄 | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |
 | 7 | Telas de mensagens e de configurações | M | Reuso dos widgets já criados |
 | 8 | Testes de widget das telas, retrospectiva, resumos e commit | P | Testar o que a tela mostra |
 
@@ -72,6 +72,16 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 - ✅ Ícones: pacote `lucide_icons_flutter` (decidido e instalado)
 - A cor primária rosa `#F3586B` serve para os botões? (passo 5)
 - Quais telas entram no MVP da mostra? Se faltar tempo, quais cortamos?
+
+## 12. Tokens lidos do Figma na Fase 3
+
+### 12.1 Tela "Rede" (lida: 1 chamada do MCP; a tela "Rede - cadastro" ainda não)
+- Cabeçalho: título "Rede de contatos" (SemiBold 24), subtítulo (Regular 16, `#64748B`) e contador "3/5" (SemiBold 16) à direita.
+- Cartão de contato: 314 × 88, raio 20, fundo branco, borda `#D9D9D9` a 30%. Avatar 46 × 44 com iniciais (Bold 16, branco), nome (Bold 16), telefone (Regular 13, `#64748B`) e "x" de 12 em cinza claro.
+- Cores dos avatares: rosa `#F3586B`, verde `#2FA36B` (**cor nova**), amarelo `#F2B632`.
+- Cartão vazio "Adicionar contato": fundo `#F8FAFC`, borda **tracejada** `#D9D9D9`, círculo `#D9D9D9` com ícone plus, texto Bold 16 `#64748B`.
+- Espaço entre cartões: 9. Barra de navegação igual à da Home, com o item "Rede" ativo.
+- Esta tela **não tem botões nem campos de texto**: o estilo deles virá da tela "Rede - cadastro".
 
 ---
 
