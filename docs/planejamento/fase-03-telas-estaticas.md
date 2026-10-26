@@ -39,8 +39,8 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 | 2 ✅ | Home, parte 1: cabeçalho, saudação e símbolo central (Normal); anéis animados em widget próprio | M | `Column`, `Row`, `Stack`, `Padding` |
 | 3 ✅ | Home, parte 2: `ModeCard` reutilizável (Atenção e Perigo) | M | Composição, parâmetros de widget |
 | 4 ✅ | Home, parte 3: barra de navegação e variação "Perigo ativo" (chip) | M | Widgets com parâmetros, `NavigationBar` |
-| 5 🔄 | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
-| 6 🔄 | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |
+| 5 ✅ | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
+| 6 ✅ | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |
 | 7 | Telas de mensagens e de configurações | M | Reuso dos widgets já criados |
 | 8 | Testes de widget das telas, retrospectiva, resumos e commit | P | Testar o que a tela mostra |
 
@@ -69,8 +69,8 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 `flutter run -d chrome`, com a janela estreita (perto de 393 × 852). `flutter analyze` e `flutter test`.
 
 ## 11. Perguntas em aberto
+- ✅ Cor primária: o design usa botões azul-marinho (`#172033`), então ele virou `primary`; o rosa `#F3586B` ficou como `tertiary` (destaque).
 - ✅ Ícones: pacote `lucide_icons_flutter` (decidido e instalado)
-- A cor primária rosa `#F3586B` serve para os botões? (passo 5)
 - Quais telas entram no MVP da mostra? Se faltar tempo, quais cortamos?
 
 ## 12. Tokens lidos do Figma na Fase 3
@@ -82,6 +82,16 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 - Cartão vazio "Adicionar contato": fundo `#F8FAFC`, borda **tracejada** `#D9D9D9`, círculo `#D9D9D9` com ícone plus, texto Bold 16 `#64748B`.
 - Espaço entre cartões: 9. Barra de navegação igual à da Home, com o item "Rede" ativo.
 - Esta tela **não tem botões nem campos de texto**: o estilo deles virá da tela "Rede - cadastro".
+
+### 12.2 Tela "Rede - cadastro" (lida: 1 chamada do MCP)
+- Cabeçalho "Novo contato" (SemiBold 24) e contador "4/5".
+- **Botão principal** ("Salvar contato"): fundo `#172033`, texto branco Bold 16, altura 49, raio 14. **A cor primária é o azul-marinho, e não o rosa.**
+- **Botão secundário** ("Cancelar"): fundo branco, borda `#D9D9D9`, texto `#64748B` Bold 16, altura 49, raio 14, ícone x de 24.
+- **Botão "Escolher da agenda"**: branco, borda `#172033`, raio 20, altura 71, texto preto Bold 16, ícone book-user.
+- **Campo de texto**: fundo branco, borda `#64748B` de 1, raio 20, altura 51, ícone de 18 à esquerda, texto Medium 15 `#64748B`. Rótulo acima: Bold 15 `#172033`.
+- Divisor "ou preencha" (SemiBold 11, `#64748B`) entre duas linhas.
+- Caixa de aviso: fundo `#2F6BB8` a 14%, raio 20, texto `#2F6BB8` Regular 13 com trecho em negrito, ícone badge-info de 22 (**cor nova**).
+- Esta tela **não tem barra de navegação**.
 
 ---
 

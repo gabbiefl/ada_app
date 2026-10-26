@@ -56,10 +56,10 @@
 
 | ID | Item | Prio | Status |
 |---|---|---|---|
-| F3-01 | Tela inicial (home) com o estado do modo atual | M | ⬜ |
+| F3-01 | Tela inicial (home) com o estado do modo atual | M | ✅ |
 | F3-02 | Tela/controle de seleção de modo (Normal, Atenção, Perigo) | M | ⬜ |
-| F3-03 | Tela de rede de contatos de confiança | M | ⬜ |
-| F3-04 | Tela de cadastro/edição de contato | M | ⬜ |
+| F3-03 | Tela de rede de contatos de confiança | M | ✅ |
+| F3-04 | Tela de cadastro/edição de contato | M | ✅ |
 | F3-05 | Tela de mensagens pré-definidas | S | ⬜ |
 | F3-06 | Tela de configurações | S | ⬜ |
 
