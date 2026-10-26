@@ -9,13 +9,19 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import 'package:ada_app/core/theme/mode_colors.dart';
+import 'package:ada_app/core/widgets/ada_bottom_nav.dart';
 import 'package:ada_app/features/home/widgets/mode_card.dart';
 import 'package:ada_app/features/home/widgets/mode_rings.dart';
+import 'package:ada_app/features/home/widgets/status_chip.dart';
 
 // StatefulWidget: agora a tela guarda algo que vive e muda, o controlador da
 // animação dos anéis. (Ver o resumo 04 de aprendizado sobre Stateless x Stateful.)
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  // dangerActive: só muda o visual (Modo Perigo ativo). O estado de verdade, que
+  // vem do app inteiro, entra na Fase 4; o modo em si, na Fase 7.
+  const HomePage({super.key, this.dangerActive = false});
+
+  final bool dangerActive;
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -53,7 +59,18 @@ class _HomePageState extends State<HomePage>
     final textTheme = theme.textTheme;
     final modeColors = ModeColors.of(context);
 
+    // Cores do símbolo central, conforme o estado.
+    final active = widget.dangerActive;
+    final ringColor = active ? modeColors.danger : modeColors.normal;
+    final circleColor = active
+        ? theme.colorScheme.onPrimary
+        : modeColors.normal;
+    final symbol = active
+        ? 'assets/images/simbolo_perigo.png'
+        : 'assets/images/simbolo_ada.png';
+
     return Scaffold(
+      bottomNavigationBar: const AdaBottomNav(),
       body: SafeArea(
         child: Column(
           children: [
@@ -134,24 +151,37 @@ class _HomePageState extends State<HomePage>
                     Stack(
                       alignment: Alignment.center,
                       children: [
-                        ModeRings(color: modeColors.normal, pulse: _pulse),
+                        ModeRings(color: ringColor, pulse: _pulse),
                         Container(
                           width: 134,
                           height: 134,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: modeColors.normal,
+                            color: circleColor,
                           ),
                           padding: const EdgeInsets.all(30),
-                          child: Image.asset('assets/images/simbolo_ada.png'),
+                          child: Image.asset(symbol),
                         ),
                       ],
                     ),
                     const SizedBox(height: 24),
-                    Text(
-                      'Nenhum alerta ativo no momento.',
-                      style: textTheme.bodyMedium,
-                    ),
+                    // Estado ativo: chip e instrução. Normal: frase de apoio.
+                    if (active) ...[
+                      StatusChip(
+                        label: 'Modo perigo ativo',
+                        color: modeColors.danger,
+                        textColor: modeColors.dangerText,
+                      ),
+                      const SizedBox(height: 8),
+                      Text(
+                        'Toque no ícone para desativar.',
+                        style: textTheme.labelMedium,
+                      ),
+                    ] else
+                      Text(
+                        'Nenhum alerta ativo no momento.',
+                        style: textTheme.bodyMedium,
+                      ),
                     const SizedBox(height: 40),
                     ModeCard(
                       title: 'MODO PERIGO',

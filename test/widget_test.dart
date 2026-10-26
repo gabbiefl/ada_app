@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:ada_app/app.dart';
+import 'package:ada_app/core/theme/app_theme.dart';
+import 'package:ada_app/features/home/pages/home_page.dart';
 
 void main() {
   // `testWidgets` cria um teste que recebe um `tester`, o "controle remoto"
@@ -29,5 +31,18 @@ void main() {
     // Procura o MaterialApp montado e confere o fundo do tema que ele recebeu.
     final app = tester.widget<MaterialApp>(find.byType(MaterialApp));
     expect(app.theme?.scaffoldBackgroundColor, const Color(0xFFF8FAFC));
+  });
+
+  testWidgets('A Home mostra o estado Modo perigo ativo', (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: AppTheme.light,
+        home: const HomePage(dangerActive: true),
+      ),
+    );
+
+    expect(find.text('Modo perigo ativo'), findsOneWidget);
+    expect(find.text('Toque no ícone para desativar.'), findsOneWidget);
+    expect(find.text('Nenhum alerta ativo no momento.'), findsNothing);
   });
 }
