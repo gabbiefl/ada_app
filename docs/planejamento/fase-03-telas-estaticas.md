@@ -35,9 +35,9 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 ## 6. Passos
 | # | Passo | Tamanho | O que a usuária aprende |
 |---|---|---|---|
-| 1 | ✅ Ícones decididos e instalados; falta exportar logo/elipses do Figma para `assets/` | P | Assets de imagem e ícones |
-| 2 | Home, parte 1: cabeçalho, saudação e símbolo central (Normal) | M | `Column`, `Row`, `Stack`, `Padding` |
-| 3 | Home, parte 2: `ModeCard` reutilizável (Atenção e Perigo) | M | Composição, parâmetros de widget |
+| 1 ✅ | Ícones decididos e instalados; logo e símbolos exportados para `assets/` | P | Assets de imagem e ícones |
+| 2 ✅ | Home, parte 1: cabeçalho, saudação e símbolo central (Normal); anéis animados em widget próprio | M | `Column`, `Row`, `Stack`, `Padding` |
+| 3 ✅ | Home, parte 2: `ModeCard` reutilizável (Atenção e Perigo) | M | Composição, parâmetros de widget |
 | 4 | Home, parte 3: barra de navegação e variação "Perigo ativo" (chip) | M | Widgets com parâmetros, `NavigationBar` |
 | 5 | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
 | 6 | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |

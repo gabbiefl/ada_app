@@ -11,13 +11,16 @@ import 'package:ada_app/app.dart';
 void main() {
   // `testWidgets` cria um teste que recebe um `tester`, o "controle remoto"
   // para montar widgets, tocar na tela e consultar o que está visível.
-  testWidgets('A tela inicial mostra o nome e o lema do ADA', (tester) async {
+  testWidgets('A tela inicial mostra a saudação', (tester) async {
     // Monta o app e espera o primeiro quadro ser desenhado.
     await tester.pumpWidget(const AdaApp());
 
     // `find.text` procura um Text com exatamente esse conteúdo.
-    expect(find.text('ADA'), findsOneWidget);
-    expect(find.text('Alerta, Defesa e Apoio'), findsOneWidget);
+    expect(find.text('Olá, Gabriela'), findsOneWidget);
+    expect(find.text('Estamos com você!'), findsOneWidget);
+    // Os dois cards dos modos aparecem.
+    expect(find.text('MODO PERIGO'), findsOneWidget);
+    expect(find.text('MODO ATENÇÃO'), findsOneWidget);
   });
 
   testWidgets('O app aplica o tema do ADA', (tester) async {

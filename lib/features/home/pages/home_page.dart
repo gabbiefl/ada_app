@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import 'package:ada_app/core/theme/mode_colors.dart';
+import 'package:ada_app/features/home/widgets/mode_card.dart';
 import 'package:ada_app/features/home/widgets/mode_rings.dart';
 
 // StatefulWidget: agora a tela guarda algo que vive e muda, o controlador da
@@ -29,12 +30,13 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _pulse = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 1500),
-    )
-      // repeat(reverse: true): vai de 0 a 1 e volta, sem parar (efeito de pulsar).
-      ..repeat(reverse: true);
+    _pulse =
+        AnimationController(
+            vsync: this,
+            duration: const Duration(milliseconds: 1500),
+          )
+          // repeat(reverse: true): vai de 0 a 1 e volta, sem parar (efeito de pulsar).
+          ..repeat(reverse: true);
   }
 
   // dispose: libera o controlador quando a tela sai, para não gastar bateria.
@@ -53,67 +55,125 @@ class _HomePageState extends State<HomePage>
 
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          // 40 é a margem lateral do design.
-          padding: const EdgeInsets.symmetric(horizontal: 40),
-          child: Column(
-            children: [
-              // Cabeçalho: logo à esquerda, sino à direita.
-              SizedBox(
+        child: Column(
+          children: [
+            // Cabeçalho: logo à esquerda, sino à direita.
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 35),
+              child: SizedBox(
                 height: 85,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset('assets/images/logo_horizontal_azul.png', height: 36),
-                    Icon(LucideIcons.bell, color: theme.colorScheme.onSurface),
-                  ],
-                ),
-              ),
-              const SizedBox(height: 16),
-              // Alignment.centerLeft: o texto encosta na esquerda.
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('Olá, Gabriela', style: textTheme.headlineSmall),
-                    Row(
-                      mainAxisSize: MainAxisSize.min,
+                    Image.asset(
+                      'assets/images/logo_horizontal_azul.png',
+                      height: 42,
+                    ),
+                    // Stack: o sino com uma bolinha de aviso por cima, no canto.
+                    Stack(
+                      clipBehavior: Clip.none,
                       children: [
-                        Text('Estamos com você!', style: textTheme.bodyLarge),
-                        const SizedBox(width: 6),
-                        // colorScheme.primary é o rosa da marca (AppColors.brand).
-                        Icon(LucideIcons.heart,
-                            size: 15, color: theme.colorScheme.primary),
+                        Icon(
+                          LucideIcons.bell,
+                          color: theme.colorScheme.onSurface,
+                        ),
+                        Positioned(
+                          top: 0,
+                          right: 0,
+                          child: Container(
+                            width: 8,
+                            height: 8,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: theme.colorScheme.primary,
+                            ),
+                          ),
+                        ),
                       ],
                     ),
                   ],
                 ),
               ),
-              // Expanded: ocupa o espaço que sobrar, e o Center põe o símbolo no meio.
-              Expanded(
-                child: Center(
-                  // Stack: um widget SOBRE o outro (anéis atrás, círculo na frente).
-                  child: Stack(
-                    alignment: Alignment.center,
-                    children: [
-                      ModeRings(color: modeColors.normal, pulse: _pulse),
-                      Container(
-                        width: 130,
-                        height: 130,
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: modeColors.normal,
-                        ),
-                        padding: const EdgeInsets.all(32),
-                        child: Image.asset('assets/images/simbolo_ada.png'),
+            ),
+            // Expanded + SingleChildScrollView: o resto da tela rola se não couber
+            // (telas baixas), em vez de dar erro de "overflow".
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.symmetric(horizontal: 40),
+                child: Column(
+                  children: [
+                    const SizedBox(height: 32),
+                    // Alignment.centerLeft: o texto encosta na esquerda.
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Olá, Gabriela', style: textTheme.headlineSmall),
+                          Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Text(
+                                'Estamos com você!',
+                                style: textTheme.bodyLarge,
+                              ),
+                              const SizedBox(width: 6),
+                              // colorScheme.primary é o rosa da marca.
+                              Icon(
+                                LucideIcons.heart,
+                                size: 15,
+                                color: theme.colorScheme.primary,
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    const SizedBox(height: 24),
+                    // Stack: um widget SOBRE o outro (anéis atrás, círculo na frente).
+                    Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        ModeRings(color: modeColors.normal, pulse: _pulse),
+                        Container(
+                          width: 134,
+                          height: 134,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: modeColors.normal,
+                          ),
+                          padding: const EdgeInsets.all(30),
+                          child: Image.asset('assets/images/simbolo_ada.png'),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 24),
+                    Text(
+                      'Nenhum alerta ativo no momento.',
+                      style: textTheme.bodyMedium,
+                    ),
+                    const SizedBox(height: 40),
+                    ModeCard(
+                      title: 'MODO PERIGO',
+                      caption: 'Clique em caso de emergências.',
+                      icon: LucideIcons.triangleAlert,
+                      color: modeColors.danger,
+                      textColor: modeColors.dangerText,
+                    ),
+                    const SizedBox(height: 16),
+                    ModeCard(
+                      title: 'MODO ATENÇÃO',
+                      caption: 'Clique em caso de atenção.',
+                      icon: LucideIcons.eye,
+                      color: modeColors.attention,
+                      textColor: modeColors.attentionText,
+                    ),
+                    const SizedBox(height: 24),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
