@@ -77,6 +77,15 @@ flutter:
         - asset: assets/fonts/Nunito-VariableFont_wght.ttf
           weight: 700
 
+  # Imagens do design (logos e símbolos dos modos), exportadas do Figma.
+  # Os anéis em volta do símbolo NÃO são imagem: serão desenhados em código,
+  # para poderem pulsar.
+  assets:
+    - assets/images/logo_horizontal_azul.png
+    - assets/images/logo_vertical_branca.png
+    - assets/images/simbolo_atencao.png
+    - assets/images/simbolo_perigo.png
+
   # To add assets to your application, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
