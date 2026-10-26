@@ -3,6 +3,7 @@
 //
 // Rode com: flutter test
 
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:ada_app/app.dart';
@@ -17,5 +18,13 @@ void main() {
     // `find.text` procura um Text com exatamente esse conteúdo.
     expect(find.text('ADA'), findsOneWidget);
     expect(find.text('Alerta, Defesa e Apoio'), findsOneWidget);
+  });
+
+  testWidgets('O app aplica o tema do ADA', (tester) async {
+    await tester.pumpWidget(const AdaApp());
+
+    // Procura o MaterialApp montado e confere o fundo do tema que ele recebeu.
+    final app = tester.widget<MaterialApp>(find.byType(MaterialApp));
+    expect(app.theme?.scaffoldBackgroundColor, const Color(0xFFF8FAFC));
   });
 }

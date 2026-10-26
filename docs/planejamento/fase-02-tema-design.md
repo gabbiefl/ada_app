@@ -44,7 +44,7 @@ O app inteiro passa a ter as cores e fontes do design. A tela inicial provisóri
 | 4 ✅ | Revisar os tokens com a usuária (checkpoint antes de codar) | P | Validar decisões de design antes de implementar |
 | 5 ✅ | Criar `app_theme.dart` com `ColorScheme` e `TextTheme` (F2-03) | M | `ThemeData`, `ColorScheme`, `TextTheme`, Material 3 |
 | 6 ✅ | Criar as cores dos modos 🔵🟡🔴 com `ThemeExtension` (F2-04) | M | `ThemeExtension`, `lerp`, `copyWith` |
-| 7 | Aplicar o tema no `app.dart`, conferir a `HomePage`, `flutter analyze` e `flutter test` | P | `Theme.of(context)`, teste de widget do tema |
+| 7 ✅ | Aplicar o tema no `app.dart`, conferir a `HomePage`, `flutter analyze` e `flutter test` | P | `Theme.of(context)`, teste de widget do tema |
 | 8 | Retrospectiva, resumos em `docs/aprendizado/`, backlog e commit | P | Fechar a fase com registro |
 
 ## 7. Decisões técnicas
