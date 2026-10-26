@@ -23,6 +23,10 @@ class AppColors {
   // Marca e destaque (coração da logo, item ativo da navegação)
   static const Color brand = Color(0xFFF3586B);
 
+  // Contatos (tela Rede): verde de um dos avatares e cinza dos espaços vazios
+  static const Color avatarGreen = Color(0xFF2FA36B);
+  static const Color placeholder = Color(0xFFD9D9D9);
+
   // Modos de segurança (usados no passo 6, em um ThemeExtension)
   static const Color modeNormal = Color(0xFF172033); // azul-marinho
   static const Color modeAttention = Color(0xFFF2B632);
