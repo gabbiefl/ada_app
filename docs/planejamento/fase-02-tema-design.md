@@ -65,10 +65,10 @@ O app inteiro passa a ter as cores e fontes do design. A tela inicial provisóri
 
 ## 9. Critérios de pronto
 - [x] MCP do Figma conectado e lendo o frame
-- [ ] Tokens registrados e revisados
-- [ ] `app_theme.dart` criado, sem cores ou fontes fixas nos widgets
-- [ ] Cores dos modos 🔵🟡🔴 acessíveis pelo tema
-- [ ] `flutter analyze` sem avisos e `flutter test` passando
+- [x] Tokens registrados e revisados
+- [x] `app_theme.dart` criado, sem cores ou fontes fixas nos widgets
+- [x] Cores dos modos 🔵🟡🔴 acessíveis pelo tema
+- [x] `flutter analyze` sem avisos e `flutter test` passando
 - [ ] Testado no Chrome
 - [ ] Backlog atualizado e commit feito
 
@@ -148,13 +148,22 @@ Altura de linha: normal (sem valor fixo). Pesos a embutir: **Light, Regular, Med
 
 ---
 
-## Retrospectiva (preencher ao concluir)
+## Retrospectiva
 
 **O que aprendi:**
+- <a autora escreve com as próprias palavras>
 - <...>
 
 **O que mudou em relação ao plano:**
-- <...>
+- O modo Normal ficou azul-marinho `#172033` (e não verde); emojis dos modos: 🔵🟡🔴.
+- A fonte Nunito é variável e entrou como asset, com o peso aplicado por `FontVariation`.
+- O plano gratuito do Figma limita as chamadas do MCP; só Home e Modo perigo ativo foram lidas. Estilos de botão e campo, e a tela "Rede - cadastro", ficam para a Fase 3.
+- Foram escritos 3 testes do tema (cores dos modos, fonte e fundo, aplicação no `AdaApp`).
+- Biblioteca de aprendizado ganhou a pasta `02-tema-e-design` com 3 resumos.
 
 **Dívidas técnicas e novos itens para o backlog:**
-- <...>
+- Cor primária do `ColorScheme` (rosa `#F3586B`) é provisória: confirmar com os botões na Fase 3.
+- Ícones do design são da família Lucide: decidir pacote ou SVGs na Fase 3 (pacote novo pede confirmação).
+- Ler no Figma os estilos de botão e campo, e a tela "Rede - cadastro", na Fase 3.
+- Resumos 03 e 04 do aprendizado citam a `HomePage` atual: decidir se são atualizados quando ela mudar (Fase 3).
+- Testar o tema no Chrome (`flutter run -d chrome`) antes de fechar a fase.

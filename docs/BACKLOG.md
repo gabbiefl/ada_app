@@ -13,11 +13,11 @@
 
 ## Fase atual
 
-**Fase 1 — Fundamentos e estrutura do projeto** (plano aprovado e em execução, em `docs/planejamento/fase-01-fundamentos.md`). A Fase 0 está concluída (ver `docs/planejamento/fase-00-viabilidade.md`)
+**Fase 2 — Tema e design system** (passos 1 a 8 prontos, falta só você escrever "O que aprendi" e testar no Chrome; plano em `docs/planejamento/fase-02-tema-design.md`). Fases 0 e 1 concluídas, exceto o passo 9 da Fase 1 (Android), adiado para antes da Fase 7.
 
 ---
 
-> Próxima: **Fase 2 — Tema e design system** (plano aprovado e em execução, em `docs/planejamento/fase-02-tema-design.md`). A Fase 1 só fecha com o passo 9 (Android) adiado e a retrospectiva preenchida.
+> Próxima: **Fase 3 — Telas estáticas**. Ao começar: ler no Figma os estilos de botão e campo e a tela "Rede - cadastro", confirmar a cor primária (rosa `#F3586B` é provisória) e decidir entre pacote Lucide ou SVGs para os ícones.
 
 ## Fase 0 — Entendimento e viabilidade
 
