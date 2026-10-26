@@ -22,10 +22,16 @@ Resumos diretos para consulta, escritos enquanto o ADA é construído. Cada tema
 | 05 | [Hot reload x hot restart](01-fundamentos/05-hot-reload-e-restart.md) |
 | 06 | [Sintaxe Dart que aparece no começo](01-fundamentos/06-sintaxe-dart-basica.md) |
 
+### ✅ 02 — Tema e design (Fase 2)
+| # | Resumo |
+|---|---|
+| 01 | [ThemeData e ColorScheme](02-tema-e-design/01-themedata-e-colorscheme.md) |
+| 02 | [TextTheme e fonte variável](02-tema-e-design/02-textTheme-e-fonte-variavel.md) |
+| 03 | [ThemeExtension e testes do tema](02-tema-e-design/03-themeextension-e-testes-do-tema.md) |
+
 ### 🔜 Próximos temas (entram quando a fase correspondente for feita)
 | Pasta | Tema | Fase |
 |---|---|---|
-| 02-tema-e-design | ThemeData, ColorScheme, TextTheme, Material 3 | 2 |
 | 03-interface | Layout: Column, Row, Expanded, Stack, composição | 3 |
 | 04-navegacao-e-estado | go_router, Provider, UI separada da lógica | 4 |
 | 05-dados-locais | Models, formulários, validação, armazenamento | 5 e 6 |
