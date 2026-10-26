@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage>
                             height: 8,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: theme.colorScheme.primary,
+                              color: theme.colorScheme.tertiary,
                             ),
                           ),
                         ),
@@ -135,11 +135,11 @@ class _HomePageState extends State<HomePage>
                                 style: textTheme.bodyLarge,
                               ),
                               const SizedBox(width: 6),
-                              // colorScheme.primary é o rosa da marca.
+                              // colorScheme.tertiary é o rosa da marca.
                               Icon(
                                 LucideIcons.heart,
                                 size: 15,
-                                color: theme.colorScheme.primary,
+                                color: theme.colorScheme.tertiary,
                               ),
                             ],
                           ),

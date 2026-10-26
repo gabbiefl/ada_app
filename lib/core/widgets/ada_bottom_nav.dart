@@ -75,13 +75,13 @@ class _NavItem extends StatelessWidget {
         height: 50,
         decoration: BoxDecoration(
           // Item ativo: fundo rosa a 15% (cor primária do tema).
-          color: active ? colors.primary.withValues(alpha: 0.15) : null,
+          color: active ? colors.tertiary.withValues(alpha: 0.15) : null,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Icon(
           icon,
           size: 24,
-          color: active ? colors.primary : colors.onSurfaceVariant,
+          color: active ? colors.tertiary : colors.onSurfaceVariant,
         ),
       ),
     );

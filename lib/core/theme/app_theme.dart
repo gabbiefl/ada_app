@@ -20,8 +20,12 @@ class AppTheme {
     // inventaria tons que o design não tem.
     const colorScheme = ColorScheme(
       brightness: Brightness.light,
-      primary: AppColors.brand, // PROVISÓRIO: confirmar com os botões (Fase 3)
+      // Os botões do design são azul-marinho, então ele é a cor primária. O rosa
+      // da marca fica como destaque (tertiary): item ativo da barra, coração.
+      primary: AppColors.modeNormal,
       onPrimary: Colors.white,
+      tertiary: AppColors.brand,
+      onTertiary: Colors.white,
       secondary: AppColors.modeNormal,
       onSecondary: Colors.white,
       error: AppColors.modeDanger,
@@ -44,6 +48,55 @@ class AppTheme {
       // Extensões: valores próprios do ADA dentro do tema (cores dos modos).
       // Nos widgets: ModeColors.of(context).danger
       extensions: const [ModeColors.light],
+      // Campos de texto: fundo branco, borda cinza-azulada e cantos de 20.
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: Colors.white,
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 15,
+        ),
+        hintStyle: AppTextTheme.textTheme.labelLarge?.copyWith(
+          color: AppColors.textSecondary,
+        ),
+        prefixIconColor: AppColors.textSecondary,
+        border: _fieldBorder(AppColors.textSecondary),
+        enabledBorder: _fieldBorder(AppColors.textSecondary),
+        // Ao digitar, a borda fica azul-marinho e mais grossa.
+        focusedBorder: _fieldBorder(AppColors.modeNormal, width: 1.5),
+      ),
+      // Botão principal (preenchido, azul-marinho).
+      filledButtonTheme: FilledButtonThemeData(style: _buttonStyle()),
+      // Botão secundário (branco com borda cinza), como o "Cancelar".
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: _buttonStyle().copyWith(
+          backgroundColor: const WidgetStatePropertyAll(Colors.white),
+          foregroundColor: const WidgetStatePropertyAll(
+            AppColors.textSecondary,
+          ),
+          side: const WidgetStatePropertyAll(
+            BorderSide(color: AppColors.placeholder),
+          ),
+        ),
+      ),
+    );
+  }
+
+  static OutlineInputBorder _fieldBorder(Color color, {double width = 1}) {
+    return OutlineInputBorder(
+      borderRadius: BorderRadius.circular(20),
+      borderSide: BorderSide(color: color, width: width),
+    );
+  }
+
+  // Base dos botões: altura 49, cantos de 14, texto Bold 16.
+  static ButtonStyle _buttonStyle() {
+    return ButtonStyle(
+      minimumSize: const WidgetStatePropertyAll(Size(double.infinity, 49)),
+      shape: WidgetStatePropertyAll(
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      ),
+      textStyle: WidgetStatePropertyAll(AppTextTheme.textTheme.titleMedium),
     );
   }
 }

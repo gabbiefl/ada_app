@@ -27,6 +27,9 @@ class AppColors {
   static const Color avatarGreen = Color(0xFF2FA36B);
   static const Color placeholder = Color(0xFFD9D9D9);
 
+  // Aviso informativo (caixa azul da tela de cadastro)
+  static const Color info = Color(0xFF2F6BB8);
+
   // Modos de segurança (usados no passo 6, em um ThemeExtension)
   static const Color modeNormal = Color(0xFF172033); // azul-marinho
   static const Color modeAttention = Color(0xFFF2B632);
