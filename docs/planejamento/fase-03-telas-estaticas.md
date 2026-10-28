@@ -41,7 +41,7 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 | 4 ✅ | Home, parte 3: barra de navegação e variação "Perigo ativo" (chip) | M | Widgets com parâmetros, `NavigationBar` |
 | 5 ✅ | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
 | 6 ✅ | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |
-| 7 | Telas de mensagens e de configurações | M | Reuso dos widgets já criados |
+| 7 ✅ | Telas de configurações, mensagens e edição de mensagem | M | Reuso dos widgets já criados |
 | 8 | Testes de widget das telas, retrospectiva, resumos e commit | P | Testar o que a tela mostra |
 
 ## 7. Decisões técnicas
@@ -92,6 +92,15 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 - Divisor "ou preencha" (SemiBold 11, `#64748B`) entre duas linhas.
 - Caixa de aviso: fundo `#2F6BB8` a 14%, raio 20, texto `#2F6BB8` Regular 13 com trecho em negrito, ícone badge-info de 22 (**cor nova**).
 - Esta tela **não tem barra de navegação**.
+
+### 12.3 Configurações, Mensagens e Mensagens - Editar (3 chamadas do MCP)
+- **Configurações:** itens de menu 314 × 99, raio 20, fundo branco, borda `#D9D9D9` a 30%. Círculo do ícone em rosa a 15% com ícone rosa, título Bold 16, descrição Regular 13 `#64748B` (2 linhas) e seta de 21 à direita. Ícones: moon-star (horário), clock (histórico) e message-circle (mensagens). O subtítulo no Figma repete o da tela Rede ("Cadastre a sua rede de confiança."): provável cópia, a confirmar.
+- **Mensagens:** cartão 314 × 139 com ponto de 7 na cor do modo (perigo, atenção e verde `#2FA36B`), título Bold 16, texto Regular 13 e "Editar" (SemiBold 14, `#64748B`). Seta de voltar à direita no cabeçalho. Subtítulo Regular 13.
+- **Mensagens - Editar:** rótulo "Texto da mensagem" (SemiBold 15); caixa de texto 314 × 172, borda `#64748B`, texto Regular 15; contador (SemiBold 11) dentro da caixa; "Resetar para padrão" (ícone rotate-ccw 16, SemiBold 14) à direita; botões Cancelar e Salvar mensagem iguais aos do cadastro. No Figma o contador mostra 94/200 para um texto de 90 caracteres: é só exemplo, o app conta de verdade.
+- **Ainda não lidas:** Horário de cobertura e Histórico de alertas (telas ligadas ao menu).
+
+### 12.4 Decisão de escopo
+- **Horário de cobertura entra no MVP** (decisão da usuária): é lógica simples em Dart. Itens F10-01 a F10-03 promovidos a prioridade M e F3-07 criado para a tela. O histórico de alertas fica como S (F3-08).
 
 ---
 

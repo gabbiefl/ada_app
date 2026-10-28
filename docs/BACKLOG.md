@@ -57,11 +57,13 @@
 | ID | Item | Prio | Status |
 |---|---|---|---|
 | F3-01 | Tela inicial (home) com o estado do modo atual | M | ✅ |
-| F3-02 | Tela/controle de seleção de modo (Normal, Atenção, Perigo) | M | ⬜ |
+| F3-02 | Tela/controle de seleção de modo (Normal, Atenção, Perigo): cobertos pelos cards da Home | M | ✅ |
 | F3-03 | Tela de rede de contatos de confiança | M | ✅ |
 | F3-04 | Tela de cadastro/edição de contato | M | ✅ |
-| F3-05 | Tela de mensagens pré-definidas | S | ⬜ |
-| F3-06 | Tela de configurações | S | ⬜ |
+| F3-05 | Tela de mensagens pré-definidas (e edição da mensagem) | S | ✅ |
+| F3-06 | Tela de configurações (menu) | S | ✅ |
+| F3-07 | Tela de horário de cobertura (ler no Figma antes) | M | ⬜ |
+| F3-08 | Tela de histórico de alertas (ler no Figma antes) | S | ⬜ |
 
 ## Fase 4 — Navegação e estado
 
@@ -119,9 +121,9 @@
 
 | ID | Item | Prio | Status |
 |---|---|---|---|
-| F10-01 | Configurar quem ligar por faixa de horário | S | ⬜ |
-| F10-02 | Lógica de seleção do contato conforme o horário | S | ⬜ |
-| F10-03 | Testes unitários da regra | S | ⬜ |
+| F10-01 | Configurar quem ligar por faixa de horário (promovido ao MVP: lógica simples em Dart) | M | ⬜ |
+| F10-02 | Lógica de seleção do contato conforme o horário | M | ⬜ |
+| F10-03 | Testes unitários da regra | M | ⬜ |
 
 ## Fase 11 — Qualidade, privacidade e acessibilidade
 
