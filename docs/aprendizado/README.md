@@ -29,10 +29,17 @@ Resumos diretos para consulta, escritos enquanto o ADA é construído. Cada tema
 | 02 | [TextTheme e fonte variável](02-tema-e-design/02-textTheme-e-fonte-variavel.md) |
 | 03 | [ThemeExtension e testes do tema](02-tema-e-design/03-themeextension-e-testes-do-tema.md) |
 
+### ✅ 03 — Interface (Fase 3)
+| # | Resumo |
+|---|---|
+| 01 | [Layout: Column, Row, Expanded e Stack](03-interface/01-layout-column-row-stack.md) |
+| 02 | [Composição: widgets reutilizáveis](03-interface/02-composicao-de-widgets.md) |
+| 03 | [Animação e desenho customizado](03-interface/03-animacao-e-desenho-customizado.md) |
+| 04 | [Campos de texto e botões no tema](03-interface/04-campos-de-texto-e-botoes-no-tema.md) |
+
 ### 🔜 Próximos temas (entram quando a fase correspondente for feita)
 | Pasta | Tema | Fase |
 |---|---|---|
-| 03-interface | Layout: Column, Row, Expanded, Stack, composição | 3 |
 | 04-navegacao-e-estado | go_router, Provider, UI separada da lógica | 4 |
 | 05-dados-locais | Models, formulários, validação, armazenamento | 5 e 6 |
 | 06-recursos-do-celular | Permissões, localização, url_launcher | 8 e 9 |
