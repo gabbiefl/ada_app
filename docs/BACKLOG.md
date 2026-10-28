@@ -68,9 +68,10 @@
 ### Telas que ainda faltam (a Fase 3 foi fechada sem elas)
 | ID | Item | Prio | Status |
 |---|---|---|---|
+| F3-14 | Ler as variações dos estados Atenção e Perigo ativos no Figma e ligar os toques dos cards da Home | M | ⬜ |
 | F3-09 | Splash e 3 telas de onboarding (já existem no Figma; ler antes) | M | ⬜ |
 | F3-10 | Tela de permissões (localização, notificações; já existe no Figma) | M | ⬜ |
-| F3-11 | Tela de mapa/localização (aba "Mapa" da barra; verificar se existe no Figma) | M | ⬜ |
+| F3-11 | Tela de mapa/localização (aba "Mapa"). Acompanhamento em tempo real é incerto (F0-02, F8-04): ideia da usuária de usar **checkpoints** da posição. Ler o Figma e decidir o conteúdo antes da Fase 8 | M | ⬜ |
 | F3-12 | Rede cheia (5/5): estado sem espaços vazios e aviso de limite (derivar do design existente) | M | ⬜ |
 | F3-13 | Login/cadastro da usuária: **não foi desenhado no Figma**. Decidir antes se o MVP precisa de conta (o app guarda tudo no aparelho) | S | ⬜ |
 
@@ -78,7 +79,7 @@
 
 | ID | Item | Prio | Status |
 |---|---|---|---|
-| F4-01 | Configurar rotas (`go_router`) | M | ⬜ |
+| F4-01 | Configurar rotas (`go_router`) e barra inferior | M | ✅ |
 | F4-02 | Estado global do modo atual | M | ⬜ |
 
 ## Fase 5 — Rede de contatos
