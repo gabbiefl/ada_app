@@ -3,11 +3,12 @@
 // mensagens são de exemplo (armazenamento na Fase 6).
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
+import 'package:ada_app/core/routes/app_router.dart';
 import 'package:ada_app/core/theme/app_colors.dart';
 import 'package:ada_app/core/theme/mode_colors.dart';
-import 'package:ada_app/core/widgets/ada_bottom_nav.dart';
 import 'package:ada_app/core/widgets/page_header.dart';
 import 'package:ada_app/features/messages/widgets/message_card.dart';
 
@@ -19,17 +20,17 @@ class MessagesPage extends StatelessWidget {
     final modeColors = ModeColors.of(context);
 
     return Scaffold(
-      bottomNavigationBar: const AdaBottomNav(currentIndex: 3),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(40, 30, 40, 24),
           child: Column(
             children: [
-              const PageHeader(
+              PageHeader(
                 title: 'Mensagens',
                 subtitle: 'Personalize as mensagens enviadas em alertas.',
-                trailing: Icon(
-                  LucideIcons.arrowLeft,
+                trailing: IconButton(
+                  onPressed: () => context.pop(),
+                  icon: const Icon(LucideIcons.arrowLeft),
                   color: AppColors.placeholder,
                 ),
               ),
@@ -38,15 +39,18 @@ class MessagesPage extends StatelessWidget {
                 title: 'Modo perigo',
                 text: 'Preciso de ajuda. estou em situação de perigo. Minha localização está sendo compartilhada.',
                 color: modeColors.danger,
+                onEdit: () => context.push(AppRoutes.editMessage),
               ),
               const SizedBox(height: 15),
               MessageCard(
                 title: 'Modo atenção',
                 text: 'Estou me sentindo insegura. Acompanhe minha localização e fique atento ao meu contato.',
                 color: modeColors.attention,
+                onEdit: () => context.push(AppRoutes.editMessage),
               ),
               const SizedBox(height: 15),
-              const MessageCard(
+              MessageCard(
+                onEdit: () => context.push(AppRoutes.editMessage),
                 title: 'Cheguei bem',
                 text: 'Cheguei em segurança. Pode ficar tranquilo(a). Obrigada por acompanhar!',
                 color: AppColors.avatarGreen,

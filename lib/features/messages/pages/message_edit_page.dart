@@ -5,10 +5,10 @@
 // Fase 6.
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import 'package:ada_app/core/theme/app_colors.dart';
-import 'package:ada_app/core/widgets/ada_bottom_nav.dart';
 import 'package:ada_app/core/widgets/page_header.dart';
 
 class MessageEditPage extends StatefulWidget {
@@ -38,7 +38,6 @@ class _MessageEditPageState extends State<MessageEditPage> {
     final textTheme = theme.textTheme;
 
     return Scaffold(
-      bottomNavigationBar: const AdaBottomNav(currentIndex: 3),
       body: SafeArea(
         child: Column(
           children: [
@@ -48,11 +47,12 @@ class _MessageEditPageState extends State<MessageEditPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const PageHeader(
+                    PageHeader(
                       title: 'Mensagens',
                       subtitle: 'Personalize as mensagens enviadas em alertas.',
-                      trailing: Icon(
-                        LucideIcons.arrowLeft,
+                      trailing: IconButton(
+                        onPressed: () => context.pop(),
+                        icon: const Icon(LucideIcons.arrowLeft),
                         color: AppColors.placeholder,
                       ),
                     ),
@@ -143,7 +143,7 @@ class _MessageEditPageState extends State<MessageEditPage> {
               child: Column(
                 children: [
                   OutlinedButton.icon(
-                    onPressed: () {},
+                    onPressed: () => context.pop(),
                     icon: const Icon(LucideIcons.x, size: 24),
                     label: const Text('Cancelar'),
                   ),

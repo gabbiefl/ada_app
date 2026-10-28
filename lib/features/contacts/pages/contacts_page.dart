@@ -4,9 +4,10 @@
 // adicionar e remover contatos de verdade entra na Fase 5.
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import 'package:ada_app/core/routes/app_router.dart';
 import 'package:ada_app/core/theme/app_colors.dart';
-import 'package:ada_app/core/widgets/ada_bottom_nav.dart';
 import 'package:ada_app/features/contacts/widgets/add_contact_card.dart';
 import 'package:ada_app/features/contacts/widgets/contact_card.dart';
 
@@ -36,7 +37,6 @@ class ContactsPage extends StatelessWidget {
     final emptySlots = _maxContacts - _contacts.length;
 
     return Scaffold(
-      bottomNavigationBar: const AdaBottomNav(currentIndex: 1),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.fromLTRB(39, 30, 39, 24),
@@ -77,7 +77,7 @@ class ContactsPage extends StatelessWidget {
                 const SizedBox(height: 9),
               ],
               for (var i = 0; i < emptySlots; i++) ...[
-                const AddContactCard(),
+                AddContactCard(onTap: () => context.push(AppRoutes.newContact)),
                 const SizedBox(height: 9),
               ],
             ],

@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
 
 import 'package:ada_app/core/theme/mode_colors.dart';
-import 'package:ada_app/core/widgets/ada_bottom_nav.dart';
 import 'package:ada_app/features/home/widgets/mode_card.dart';
 import 'package:ada_app/features/home/widgets/mode_rings.dart';
 import 'package:ada_app/features/home/widgets/status_chip.dart';
@@ -70,7 +69,6 @@ class _HomePageState extends State<HomePage>
         : 'assets/images/simbolo_ada.png';
 
     return Scaffold(
-      bottomNavigationBar: const AdaBottomNav(),
       body: SafeArea(
         child: Column(
           children: [
