@@ -13,11 +13,11 @@
 
 ## Fase atual
 
-**Fase 2 — Tema e design system** (passos 1 a 8 prontos, falta só você escrever "O que aprendi" e testar no Chrome; plano em `docs/planejamento/fase-02-tema-design.md`). Fases 0 e 1 concluídas, exceto o passo 9 da Fase 1 (Android), adiado para antes da Fase 7.
+**Fase 3 — Telas estáticas** concluída com telas pendentes (ver F3-09 a F3-13). Falta você escrever o "O que aprendi" das Fases 1, 2 e 3. O passo 9 da Fase 1 (Android) segue adiado para antes da Fase 7.
 
 ---
 
-> Próxima: **Fase 3 — Telas estáticas**. Ao começar: ler no Figma os estilos de botão e campo e a tela "Rede - cadastro", confirmar a cor primária (rosa `#F3586B` é provisória) e decidir entre pacote Lucide ou SVGs para os ícones.
+> Próxima: **Fase 4 — Navegação e estado** (`go_router` e estado global; cada pacote pede a sua confirmação).
 
 ## Fase 0 — Entendimento e viabilidade
 
@@ -64,6 +64,15 @@
 | F3-06 | Tela de configurações (menu) | S | ✅ |
 | F3-07 | Tela de horário de cobertura (ler no Figma antes) | M | ⬜ |
 | F3-08 | Tela de histórico de alertas (ler no Figma antes) | S | ⬜ |
+
+### Telas que ainda faltam (a Fase 3 foi fechada sem elas)
+| ID | Item | Prio | Status |
+|---|---|---|---|
+| F3-09 | Splash e 3 telas de onboarding (já existem no Figma; ler antes) | M | ⬜ |
+| F3-10 | Tela de permissões (localização, notificações; já existe no Figma) | M | ⬜ |
+| F3-11 | Tela de mapa/localização (aba "Mapa" da barra; verificar se existe no Figma) | M | ⬜ |
+| F3-12 | Rede cheia (5/5): estado sem espaços vazios e aviso de limite (derivar do design existente) | M | ⬜ |
+| F3-13 | Login/cadastro da usuária: **não foi desenhado no Figma**. Decidir antes se o MVP precisa de conta (o app guarda tudo no aparelho) | S | ⬜ |
 
 ## Fase 4 — Navegação e estado
 

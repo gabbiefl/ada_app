@@ -1,6 +1,6 @@
 # Fase 3 — Telas estáticas
 
-> **Status:** 📝 em planejamento
+> **Status:** ✅ concluída (com telas pendentes, ver backlog F3-09 a F3-13)
 > **Itens do backlog:** F3-01 a F3-06
 
 ## 1. Objetivo
@@ -42,7 +42,7 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 | 5 ✅ | Ler "Rede - cadastro" no Figma; ajustar tema com botões e campos | M | `FilledButton`, `InputDecorationTheme` |
 | 6 ✅ | Telas de rede e de cadastro de contato | M | `ListView`, `TextField`, `Form` (só visual) |
 | 7 ✅ | Telas de configurações, mensagens e edição de mensagem | M | Reuso dos widgets já criados |
-| 8 | Testes de widget das telas, retrospectiva, resumos e commit | P | Testar o que a tela mostra |
+| 8 ✅ | Testes de widget das telas, retrospectiva, resumos e commit | P | Testar o que a tela mostra |
 
 ## 7. Decisões técnicas
 | Decisão | Alternativas consideradas | Motivo |
@@ -59,11 +59,11 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 | Mudar de web para Android só na Fase 7 | Problema de layout só aparece tarde | Testar no Chrome com largura de celular (393 × 852) |
 
 ## 9. Critérios de pronto
-- [ ] Telas do escopo montadas, sem cores ou fontes fixas nos widgets
-- [ ] Widgets reutilizáveis em `features/<nome>/widgets/`
-- [ ] `flutter analyze` sem avisos e `flutter test` passando
-- [ ] Testado no Chrome
-- [ ] Backlog atualizado e commit feito
+- [x] Telas do escopo montadas, sem cores ou fontes fixas nos widgets
+- [x] Widgets reutilizáveis em `features/<nome>/widgets/`
+- [x] `flutter analyze` sem avisos e `flutter test` passando
+- [x] Testado no Chrome
+- [x] Backlog atualizado e commit feito
 
 ## 10. Como testar
 `flutter run -d chrome`, com a janela estreita (perto de 393 × 852). `flutter analyze` e `flutter test`.
@@ -104,13 +104,23 @@ O app mostra a Home com o visual do design (saudação, símbolo central, cards 
 
 ---
 
-## Retrospectiva (preencher ao concluir)
+## Retrospectiva
 
 **O que aprendi:**
+- <a autora escreve com as próprias palavras>
 - <...>
 
 **O que mudou em relação ao plano:**
-- <...>
+- Ícones: pacote `lucide_icons_flutter` (aprovado) em vez de SVGs. Os anéis do símbolo viraram widget próprio com animação de pulso, fora do plano original.
+- A cor primária do tema virou azul-marinho (os botões do design são dessa cor); o rosa ficou como destaque (`tertiary`).
+- Telas feitas: Home (Normal e Perigo ativo), Rede, Novo contato, Configurações, Mensagens e Mensagens - Editar. O contador e o reset da edição já funcionam.
+- Foram lidas 5 telas do Figma, mais 2 leituras da Home e uma que falhou (plano gratuito).
+- Bibliotecas de aprendizado: pasta `03-interface` com 4 resumos.
 
 **Dívidas técnicas e novos itens para o backlog:**
-- <...>
+- Telas que faltam: splash, 3 de onboarding, permissões, mapa/localização, rede cheia (5/5) e login/cadastro, que não foi desenhado no Figma (F3-09 a F3-13).
+- Horário de cobertura (F3-07, F10-01 a F10-03) entrou no MVP; o histórico de alertas (F3-08) tem prioridade menor.
+- O subtítulo de Configurações no Figma repete o da Rede ("Cadastre a sua rede de confiança."): confirmar o texto.
+- A barra de navegação e os botões ainda não navegam (Fase 4). Tocar no símbolo para desativar o Modo Perigo também depende do estado global (Fase 4).
+- Trocar o cabeçalho escrito à mão por `PageHeader` nas telas Rede, Novo contato e Configurações.
+- Resumos 03 e 04 da Fase 1 citam a `HomePage` antiga: decidir se são atualizados.

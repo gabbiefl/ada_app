@@ -10,7 +10,7 @@
 ![Material 3](https://img.shields.io/badge/Material%20Design%203-757575?style=for-the-badge&logo=materialdesign&logoColor=white)
 
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Fase atual](https://img.shields.io/badge/fase%20atual-3%20%E2%80%94%20telas%20est%C3%A1ticas-orange)
+![Fase atual](https://img.shields.io/badge/fase%20atual-4%20%E2%80%94%20navega%C3%A7%C3%A3o-orange)
 ![Projeto acadêmico](https://img.shields.io/badge/projeto-acad%C3%AAmico-blue)
 
 </div>
@@ -30,8 +30,8 @@ A proposta é oferecer uma forma **rápida e simples de pedir ajuda em situaçõ
 |---|---|---|
 | 0 e 1 | Viabilidade, fundamentos e estrutura do projeto | ✅ |
 | 2 | Tema e design system (cores, fonte Nunito, cores dos modos 🔵🟡🔴) | ✅ |
-| 3 | Telas estáticas a partir do Figma | 🔄 Home pronta (cabeçalho, símbolo com anéis animados, cards dos modos, barra de navegação, estado "Perigo ativo") |
-| 4 em diante | Navegação, rede de contatos, modos de alerta, localização e envio | ⬜ |
+| 3 | Telas estáticas: Home, Rede, Novo contato, Configurações, Mensagens e Editar mensagem | ✅ (faltam splash, onboarding e permissões) |
+| 4 em diante | Navegação, rede de contatos, modos de alerta, localização e envio | 🔄 Fase 4 a seguir |
 
 O plano de cada fase está em [`docs/planejamento/`](docs/planejamento/) e a lista de itens em [`docs/BACKLOG.md`](docs/BACKLOG.md).
 
@@ -67,11 +67,11 @@ Para conferir a qualidade do código: `flutter analyze` e `flutter test`.
 lib/
 ├── core/
 │   ├── theme/      # cores, textos e tema do app (AppTheme, ModeColors)
-│   └── widgets/    # widgets usados em várias telas (barra de navegação)
+│   └── widgets/    # widgets usados em várias telas (barra de navegação, cabeçalho)
 └── features/       # uma pasta por funcionalidade (home, contacts, modes...)
-    └── home/
-        ├── pages/    # telas
-        └── widgets/  # peças da tela (anéis, cards dos modos, chip)
+    ├── home/  contacts/  settings/  messages/
+    │   ├── pages/    # telas
+    │   └── widgets/  # peças da tela (anéis, cards, chips...)
 ```
 
 ## 📚 Aprendizado
