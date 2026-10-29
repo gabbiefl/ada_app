@@ -5,8 +5,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:provider/provider.dart';
 
 import 'package:ada_app/app.dart';
+import 'package:ada_app/core/state/mode_controller.dart';
+import 'package:ada_app/core/state/security_mode.dart';
 import 'package:ada_app/core/theme/app_theme.dart';
 import 'package:ada_app/features/home/pages/home_page.dart';
 
@@ -33,16 +36,37 @@ void main() {
     expect(app.theme?.scaffoldBackgroundColor, const Color(0xFFF8FAFC));
   });
 
-  testWidgets('A Home mostra o estado Modo perigo ativo', (tester) async {
+  testWidgets('A Home acompanha o modo do controlador', (tester) async {
+    final controller = ModeController();
+    addTearDown(controller.dispose);
+
+    // .value: fornece um controlador que já existe (o teste guarda a referência
+    // para poder mudar o modo depois).
     await tester.pumpWidget(
-      MaterialApp(
-        theme: AppTheme.light,
-        home: const HomePage(dangerActive: true),
+      ChangeNotifierProvider.value(
+        value: controller,
+        child: MaterialApp(theme: AppTheme.light, home: const HomePage()),
       ),
     );
+
+    // Começa no Normal.
+    expect(find.text('Nenhum alerta ativo no momento.'), findsOneWidget);
+    expect(find.text('Modo perigo ativo'), findsNothing);
+
+    // Muda o modo: a Home deve se redesenhar sozinha.
+    // pump(Duration) em vez de pumpAndSettle: os anéis pulsam para sempre.
+    controller.activate(SecurityMode.danger);
+    await tester.pump(const Duration(milliseconds: 100));
 
     expect(find.text('Modo perigo ativo'), findsOneWidget);
     expect(find.text('Toque no ícone para desativar.'), findsOneWidget);
     expect(find.text('Nenhum alerta ativo no momento.'), findsNothing);
+
+    // E volta ao Normal.
+    controller.deactivate();
+    await tester.pump(const Duration(milliseconds: 100));
+
+    expect(find.text('Nenhum alerta ativo no momento.'), findsOneWidget);
+    expect(find.text('Modo perigo ativo'), findsNothing);
   });
 }

@@ -7,7 +7,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:lucide_icons_flutter/lucide_icons.dart';
+import 'package:provider/provider.dart';
 
+import 'package:ada_app/core/state/mode_controller.dart';
+import 'package:ada_app/core/state/security_mode.dart';
 import 'package:ada_app/core/theme/mode_colors.dart';
 import 'package:ada_app/features/home/widgets/mode_card.dart';
 import 'package:ada_app/features/home/widgets/mode_rings.dart';
@@ -16,11 +19,9 @@ import 'package:ada_app/features/home/widgets/status_chip.dart';
 // StatefulWidget: agora a tela guarda algo que vive e muda, o controlador da
 // animação dos anéis. (Ver o resumo 04 de aprendizado sobre Stateless x Stateful.)
 class HomePage extends StatefulWidget {
-  // dangerActive: só muda o visual (Modo Perigo ativo). O estado de verdade, que
-  // vem do app inteiro, entra na Fase 4; o modo em si, na Fase 7.
-  const HomePage({super.key, this.dangerActive = false});
-
-  final bool dangerActive;
+  // O modo atual não é mais parâmetro: a Home o lê do ModeController, que vive
+  // no app inteiro (ver app.dart).
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -58,8 +59,14 @@ class _HomePageState extends State<HomePage>
     final textTheme = theme.textTheme;
     final modeColors = ModeColors.of(context);
 
+    // context.watch: "assina" o controlador. Quando o modo muda e ele chama
+    // notifyListeners(), este build roda de novo e a tela se atualiza.
+    // O visual do Modo Atenção ainda não foi lido no Figma, então por ora só o
+    // Perigo muda a tela.
+    final mode = context.watch<ModeController>().mode;
+
     // Cores do símbolo central, conforme o estado.
-    final active = widget.dangerActive;
+    final active = mode == SecurityMode.danger;
     final ringColor = active ? modeColors.danger : modeColors.normal;
     final circleColor = active
         ? theme.colorScheme.onPrimary

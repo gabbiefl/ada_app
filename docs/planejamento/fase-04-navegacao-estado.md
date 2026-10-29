@@ -44,7 +44,7 @@ Fazer o app navegável (barra inferior, abrir e voltar de telas) e guardar o mod
 | 3 ✅ | Ligar os botões: itens de Configurações, "Editar", "Adicionar contato", "Cancelar" e setas | P | `context.push`, `context.pop` |
 | 4 ✅ | Criar `SecurityMode` (enum) e `ModeController` (`ChangeNotifier`) com teste unitário | M | `enum`, `ChangeNotifier`, teste de lógica |
 | 5 ✅ | Adicionar `provider` e fornecer o controlador ao app | P | Provider, `context.watch` x `context.read` |
-| 6 | Home lê o modo do controlador (sempre Normal por enquanto); `dangerActive` deixa de ser parâmetro; toques nos cards ficam para depois de ler o Figma | M | Estado global, reconstrução da tela |
+| 6 ✅ | Home lê o modo do controlador (sempre Normal por enquanto); `dangerActive` deixa de ser parâmetro; toques nos cards ficam para depois de ler o Figma | M | Estado global, reconstrução da tela |
 | 7 | Testes de navegação e de estado; `flutter analyze` | P | Testar fluxo, não só tela |
 | 8 | Retrospectiva, resumos em `docs/aprendizado/`, backlog e commit | P | Fechar a fase |
 
