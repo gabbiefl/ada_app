@@ -42,8 +42,8 @@ Fazer o app navegável (barra inferior, abrir e voltar de telas) e guardar o mod
 | 1 ✅ | Adicionar `go_router` e criar as rotas simples (sem barra) em `core/routes/` | M | Rotas, `MaterialApp.router`, `go` x `push` |
 | 2 ✅ | Barra inferior com `StatefulShellRoute`: `AdaBottomNav` passa a navegar | M | Rotas aninhadas, índice da aba |
 | 3 ✅ | Ligar os botões: itens de Configurações, "Editar", "Adicionar contato", "Cancelar" e setas | P | `context.push`, `context.pop` |
-| 4 | Criar `SecurityMode` (enum) e `ModeController` (`ChangeNotifier`) com teste unitário | M | `enum`, `ChangeNotifier`, teste de lógica |
-| 5 | Adicionar `provider` e fornecer o controlador ao app | P | Provider, `context.watch` x `context.read` |
+| 4 ✅ | Criar `SecurityMode` (enum) e `ModeController` (`ChangeNotifier`) com teste unitário | M | `enum`, `ChangeNotifier`, teste de lógica |
+| 5 ✅ | Adicionar `provider` e fornecer o controlador ao app | P | Provider, `context.watch` x `context.read` |
 | 6 | Home lê o modo do controlador (sempre Normal por enquanto); `dangerActive` deixa de ser parâmetro; toques nos cards ficam para depois de ler o Figma | M | Estado global, reconstrução da tela |
 | 7 | Testes de navegação e de estado; `flutter analyze` | P | Testar fluxo, não só tela |
 | 8 | Retrospectiva, resumos em `docs/aprendizado/`, backlog e commit | P | Fechar a fase |
@@ -78,7 +78,7 @@ Fazer o app navegável (barra inferior, abrir e voltar de telas) e guardar o mod
 `flutter run -d chrome`, tocar na barra, abrir Mensagens e editar, ativar e desativar o Modo Perigo. `flutter analyze` e `flutter test`.
 
 ## 11. Perguntas em aberto
-- ✅ `go_router` instalado (passo 1). `provider`: confirmar no passo 5.
+- ✅ `go_router` instalado (passo 1). `provider` instalado (passo 5), com confirmação da usuária.
 - ✅ Cards Atenção e Perigo não ativam nada até lermos as variações no Figma (decisão da usuária).
 - Tela de Mapa: como mostrar a localização se não dá para acompanhar em tempo real? Ideia da usuária: **checkpoints** da posição (ver F3-11 no backlog). Fica para a Fase 8; aqui o Mapa é provisório.
 

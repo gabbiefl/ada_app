@@ -3,8 +3,10 @@
 // As telas e a navegação ficam em core/routes/app_router.dart.
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'package:ada_app/core/routes/app_router.dart';
+import 'package:ada_app/core/state/mode_controller.dart';
 import 'package:ada_app/core/theme/app_theme.dart';
 
 // StatelessWidget: um widget que NÃO guarda dados que mudam.
@@ -20,13 +22,19 @@ class AdaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // MaterialApp: a "casca" que dá ao app o visual e o comportamento do
     // Material Design (navegação, tema, textos do sistema).
-    return MaterialApp.router(
-      // Nome que o sistema usa, por exemplo na lista de apps recentes.
-      title: 'ADA',
-      // Tema do ADA (cores e fonte do Figma), definido em core/theme/.
-      theme: AppTheme.light,
-      // As telas e a navegação vêm do go_router (core/routes/app_router.dart).
-      routerConfig: appRouter,
+    // ChangeNotifierProvider: cria UM ModeController e o deixa disponível para
+    // todas as telas abaixo dele. `create` roda uma vez só, e o provider chama
+    // dispose() do controlador quando o app fecha.
+    return ChangeNotifierProvider(
+      create: (_) => ModeController(),
+      child: MaterialApp.router(
+        // Nome que o sistema usa, por exemplo na lista de apps recentes.
+        title: 'ADA',
+        // Tema do ADA (cores e fonte do Figma), definido em core/theme/.
+        theme: AppTheme.light,
+        // As telas e a navegação vêm do go_router (core/routes/app_router.dart).
+        routerConfig: appRouter,
+      ),
     );
   }
 }
